@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function () {
+            'use strict'
+                String.prototype.filter = function (erase) {
+                    let input = this.toString();
+                    for (let val of erase) {
+                        input = input.replace(val, "***")
+                    }
+                    return input;
+                }
+                console.log(("This House is nice!").filter(["House", "nice"]));
+                
+            })();
+        </script>
+</body>
+</html>
